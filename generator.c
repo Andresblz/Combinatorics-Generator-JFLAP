@@ -37,7 +37,7 @@ int main(int argc, const char *argv[]) {
     char alphabet[MAX];
 
     if (argc <= 1) {
-        fprintf(stderr, "Use: generator (alphabet) [word count]");
+        fprintf(stderr, "Usage: ./generator alphabet [word count]");
         exit(1);
     }
 
