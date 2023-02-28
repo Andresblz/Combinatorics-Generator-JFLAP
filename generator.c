@@ -14,11 +14,11 @@ void generateWords(char *alphabet, int length, int remaining, int maxWords, char
         return;
     }
     for (int i = 0; i < strlen(alphabet); i++) {
-        char new_prefix[strlen(prefix) + 1];
-        strcpy(new_prefix, prefix);
-        new_prefix[strlen(prefix)] = alphabet[i];
-        new_prefix[strlen(prefix) + 1] = '\0';
-        generateWords(alphabet, length, remaining - 1, maxWords, new_prefix, wordCount);
+        char newPrefix[strlen(prefix) + 1];
+        strcpy(newPrefix, prefix);
+        newPrefix[strlen(prefix)] = alphabet[i];
+        newPrefix[strlen(prefix) + 1] = '\0';
+        generateWords(alphabet, length, remaining - 1, maxWords, newPrefix, wordCount);
     }
 }
 
