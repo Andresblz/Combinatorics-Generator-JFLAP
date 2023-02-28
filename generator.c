@@ -4,12 +4,12 @@
 
 #define MAX 1000
 
-void generateWords(char *alphabet, int length, int remaining, int maxWords, char *prefix, int *wordCount) {
+void generateWords(char *alphabet, int length, int remaining, int maxWords, char *prefix, int *wordCount, FILE *fp) {
     if (*wordCount == maxWords) {
         return;
     }
     if (remaining == 0) {
-        printf("%s\n", prefix);
+        fprintf(fp, "%s\n", prefix);
         (*wordCount)++;
         return;
     }
@@ -18,16 +18,16 @@ void generateWords(char *alphabet, int length, int remaining, int maxWords, char
         strcpy(newPrefix, prefix);
         newPrefix[strlen(prefix)] = alphabet[i];
         newPrefix[strlen(prefix) + 1] = '\0';
-        generateWords(alphabet, length, remaining - 1, maxWords, newPrefix, wordCount);
+        generateWords(alphabet, length, remaining - 1, maxWords, newPrefix, wordCount, fp);
     }
 }
 
-void possibleCombinations(char *alphabet, int maxWords) {
+void possibleCombinations(char *alphabet, int maxWords, FILE *fp) {
     int length = 1;
     int wordCount = 0;
 
     while (wordCount < maxWords) {
-        generateWords(alphabet, length, length, maxWords, "", &wordCount);
+        generateWords(alphabet, length, length, maxWords, "", &wordCount, fp);
         length++;
     }
 }
@@ -35,6 +35,7 @@ void possibleCombinations(char *alphabet, int maxWords) {
 int main(int argc, const char *argv[]) {
     int maxWords;
     char alphabet[MAX];
+    FILE *fp;
 
     if (argc <= 1) {
         fprintf(stderr, "Usage: ./generator alphabet [word count]");
@@ -49,8 +50,15 @@ int main(int argc, const char *argv[]) {
         maxWords = MAX;
     }
 
-    possibleCombinations(alphabet, maxWords);
+    fp = fopen("output.txt", "w");
+    if (fp == NULL) {
+        fprintf(stderr, "Error: could not open file");
+        exit(1);
+    }
 
-    puts("");
+    possibleCombinations(alphabet, maxWords, fp);
+
+    fclose(fp);
+    printf("Output written to output.txt\n");
     return 0;
 }
