@@ -9,7 +9,7 @@ void generateWords(char *alphabet, int length, int remaining, int maxWords, char
         return;
     }
     if (remaining == 0) {
-        fprintf(fp, "%s\n", prefix);
+        fprintf(fp, " %s", prefix);
         (*wordCount)++;
         return;
     }
