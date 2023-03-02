@@ -31,12 +31,10 @@ Personally, I have used the program to generate files for testing in [JFLAP](htt
 Output (in `output.txt`):
 
 ```
-a
-b
-c
-aa
-ab
+a b c aa ab
 ```
+
+In this version of the program, lambda cannot be entered automatically, so it will have to be imported manually into JFLAP.
 
 ## Implementation
 
