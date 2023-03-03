@@ -46,6 +46,11 @@ int main(int argc, const char *argv[]) {
 
     if (argc == 3) {
         maxWords = atoi(argv[2]);
+
+        if (maxWords > MAX) {
+            fprintf(stderr, "Info: word count could not be higher than %d", MAX);
+            maxWords = MAX;
+        }
     } else {
         maxWords = MAX;
     }
