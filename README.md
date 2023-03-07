@@ -28,7 +28,7 @@ Personally, I have used the program to generate files for testing in [JFLAP](htt
 ./generator abc 5
 ```
 
-Output (in `alphabet.txt`):
+Output (in `abc.txt`):
 
 ```
 a b c aa ab
