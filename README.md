@@ -18,7 +18,7 @@ Then, run the executable with the following arguments:
 
 The `alphabet` argument is a string of characters that represent the alphabet to be used for the combinations. The `word count` argument is an optional integer that specifies the maximum number of words to generate. If the `word count` argument is not provided, the tool will generate all possible combinations up to a maximum of 1000 words.
 
-The output will be written to a file named `output.txt` in the same directory as the executable.
+The output will be written to a file named `alphabet.txt` in the same directory as the executable.
 
 Personally, I have used the program to generate files for testing in [JFLAP](https://www.jflap.org/).
 
@@ -28,7 +28,7 @@ Personally, I have used the program to generate files for testing in [JFLAP](htt
 ./generator abc 5
 ```
 
-Output (in `output.txt`):
+Output (in `alphabet.txt`):
 
 ```
 a b c aa ab
