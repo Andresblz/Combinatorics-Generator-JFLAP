@@ -35,6 +35,7 @@ void possibleCombinations(char *alphabet, int maxWords, FILE *fp) {
 int main(int argc, const char *argv[]) {
     int maxWords;
     char alphabet[MAX];
+    char filename[100];
     FILE *fp;
 
     if (argc <= 1) {
@@ -43,6 +44,8 @@ int main(int argc, const char *argv[]) {
     }
 
     strcpy(alphabet, argv[1]);
+    strcat(filename, alphabet);
+    strcat(filename, ".txt");
 
     if (argc == 3) {
         maxWords = atoi(argv[2]);
@@ -55,7 +58,7 @@ int main(int argc, const char *argv[]) {
         maxWords = MAX;
     }
 
-    fp = fopen("output.txt", "w");
+    fp = fopen(filename, "w");
     if (fp == NULL) {
         fprintf(stderr, "Error: could not open file");
         exit(1);
