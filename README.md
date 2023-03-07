@@ -34,7 +34,7 @@ Output (in `abc.txt`) UNIX:
 a b c aa ab
 ```
 
-Output (in `abc.txt`) UNIX:
+Output (in `abc.txt`) Windows:
 
 ```
 a
