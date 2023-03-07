@@ -28,10 +28,20 @@ Personally, I have used the program to generate files for testing in [JFLAP](htt
 ./generator abc 5
 ```
 
-Output (in `abc.txt`):
+Output (in `abc.txt`) UNIX:
 
 ```
 a b c aa ab
+```
+
+Output (in `abc.txt`) UNIX:
+
+```
+a
+b
+c
+aa
+ab
 ```
 
 In this version of the program, lambda cannot be entered automatically, so it will have to be imported manually into JFLAP.
