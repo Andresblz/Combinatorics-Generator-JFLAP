@@ -8,6 +8,7 @@ void generateWords(char *alphabet, int length, int remaining, int maxWords, char
     if (*wordCount == maxWords) {
         return;
     }
+
     if (remaining == 0) {
         #ifdef _WIN32
             fprintf(fp, "%s\n", prefix);
@@ -18,6 +19,7 @@ void generateWords(char *alphabet, int length, int remaining, int maxWords, char
         (*wordCount)++;
         return;
     }
+    
     for (int i = 0; i < strlen(alphabet); i++) {
         char newPrefix[strlen(prefix) + 1];
         strcpy(newPrefix, prefix);
