@@ -56,3 +56,7 @@ The code is divided into two main functions:
 * `possibleCombinations`: generates all possible combinations up to a given length and prints them to the console.
 
 The tool also includes error handling for invalid input arguments and for file I/O errors. The maximum limit of 1000 words is hardcoded in the `MAX` macro.
+
+## Support me
+
+<a href="https://www.buymeacoffee.com/andr3kt" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-blue.png" alt="Buy Me A Coffee" height="41" width="174"></a>
